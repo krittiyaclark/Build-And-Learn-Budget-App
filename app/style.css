@@ -1,0 +1,40 @@
+.container-fluid {
+	background-color: #6c2eb9;
+	/*height: 5rem;*/
+}
+
+.row {
+	background-color: #FF9232;
+	height: 4.7rem;
+}
+
+[class*="col-"] {
+	background-color: #00c3aa;
+	height: 4.2rem;
+	border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.bg {
+	background-image: url("./images/clouds.jpg");
+	/* Half height */
+	height: 20rem; 
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
