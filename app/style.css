@@ -1,16 +1,5 @@
-.container-fluid {
-	background-color: #6c2eb9;
-	/*height: 5rem;*/
-}
-
-.row {
-	background-color: #FF9232;
-	height: 4.7rem;
-}
-
 [class*="col-"] {
-	background-color: #00c3aa;
-	height: 4.2rem;
+	background-color: rgba(0, 195, 170, 0.3);
 	border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -26,6 +15,15 @@
 
 }
 
+.app-head {
+	text-align: center;
+}
+.app-title {
+	font-size: 1.5rem;
+}
+.app-balance {
+	font-size: 2.2rem;
+}
 
 
 
