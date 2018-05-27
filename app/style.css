@@ -1,18 +1,14 @@
-[class*="col-"] {
-	background-color: rgba(0, 195, 170, 0.3);
+.hdr {
+	background-color: rgba(0, 195, 170, 0.14);
 	border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .bg {
 	background-image: url("./images/clouds.jpg");
-	/* Half height */
-	height: 20rem; 
-
 	/* Center and scale the image nicely */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-
 }
 
 .app-head {
@@ -20,19 +16,53 @@
 }
 .app-title {
 	font-size: 1.5rem;
+	margin-top: 10px;
 }
 .app-balance {
 	font-size: 2.2rem;
+	margin-bottom: 20px;
 }
 
+.app-income {
+	font-weight: 700;
+	background-color: palegreen;
+	max-width: 350px;
+	margin: auto;
+}
+.app-expenses {
+	font-weight: 700;
+	background-color: coral;
+	max-width: 350px;
+	margin: auto;
+	text-align: left;
+}
 
+.small-field {
+	min-width: 70px;
+	max-width: 80px
+}
 
+.new-entry {
+	border-color: rgba(0, 0, 0, 0.3);
+	border-style: solid;
+	border-width: 2px 0px;
+}
 
+.tbl-hdr-inc {
+	color: palegreen;
+}
 
+.tbl-hdr-exp {
+	color: coral;
+}
 
+.hdr2 {
+	background-color: rgba(20, 33, 79, 0.9);
+}
 
-
-
+.value-input {
+	text-align: right;
+}
 
 
 

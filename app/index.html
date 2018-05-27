@@ -12,25 +12,126 @@
 
     <title>Team INT-16 Project</title>
   </head>
+
+
   <body>
-    <header>
-      <div class="bg">
+    <header class="bg">
+        <div class="container">
+          <div class="row">
+            <div class="col"></div> <!-- spacer column left -->
+          	<div class="col-sm-12 col-md-10 hdr app-head">
+          		<div class="app-title">
+                Available Budget in May 2018
+              </div>
+              <div class="app-balance">
+                175.00
+              </div>
+
+              <div class="row app-income text-left">
+                <div class="col">
+                  INCOME
+                </div>
+              </div>
+              <div class="row app-income">
+                <div class="col text-right">
+                  250.00
+                </div>
+              </div>
+
+              <div class="row app-expenses text-left">
+                <div class="col">
+                  EXPENSES
+                </div>
+              </div>
+              <div class="row app-expenses text-right">
+                <div class="col-sm text-right">
+                  -75.00
+                </div>
+              </div>
+          	</div>
+            <div class="col"></div> <!-- spacer column right -->
+          </div>
+        </div>
+    </header>
+
+      <!-- End of Header Section -->
+
+      <!-- Beginning of One-line Form Section and below that -->
+      <div class="container">
         <div class="row">
           <div class="col"></div>
-        	<div class="col-sm-12 col-md-8 app-head">
-        		<div class="app-title">
-              Available Budget in May 2018
-            </div>
-            <div class="app-balance">
-              Placeholder for Balance
-            </div>
-        	</div>
-          
+          <div class="col-sm-12 col-md-10 hdr">
+            <form>
+              <!-- DESCRIPTION -->
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Add description">
+                </div>
+              </div>
 
+              <!-- Positive/Negative field and Amount (Value) field -->
+              <div class="form-row">
+                <div class="col"></div>
+
+                <div class="col-2 small-field">
+                  <select class="form-control">
+                    <option>+</option>
+                    <option>-</option>
+                  </select>
+                </div>
+
+
+                <div class="col-4">
+                  <input type="text" class="form-control value-input" placeholder="Value">
+                </div>
+              </div>
+
+              <button type="submit" class="btn float-right">Submit</button>                
+            </form>
+          </div>
           <div class="col"></div>
         </div>
+
+        <!-- Recorded entries of income and expense -->
+        <div class="row">
+          <div class="col"></div> <!-- spacer column left -->
+          <div class="col-sm-12 col-md-10">
+            <!-- Header Row of Table -->
+            <div class="row hdr2">
+              <div class="col font-weight-bold tbl-hdr-inc">
+                INCOME
+              </div>
+              <div class="col font-weight-bold tbl-hdr-exp">
+                EXPENSES
+              </div>
+            </div>
+            <!-- Header Row End -->
+
+            <!-- Example Row Entry -->
+            <div class="row new-entry">
+              <div class="col"> <!-- Income Column -->
+                <div class="row">
+                  <div class="col">payroll deposit</div>
+                  <div class="col text-right">520</div>
+                </div>
+              </div>
+              <div class="col"> <!-- Expenses Column -->
+                <div class="row">
+                  <div class="col">cheese</div>
+                  <div class="col text-right">-5.00</div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="col"></div> <!-- spacer column right -->
+
+
+        </div>
       </div>
-    </header>
+    
 
 
 
