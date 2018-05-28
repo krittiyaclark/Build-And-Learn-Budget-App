@@ -15,7 +15,8 @@
 	text-align: center;
 }
 .app-title {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
+	font-weight: 700;
 	margin-top: 10px;
 }
 .app-balance {
@@ -60,9 +61,6 @@
 	background-color: rgba(20, 33, 79, 0.9);
 }
 
-.value-input {
-	text-align: right;
-}
 
 
 
