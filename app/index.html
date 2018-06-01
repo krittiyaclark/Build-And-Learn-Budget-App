@@ -63,16 +63,19 @@
                 <!-- Positive/Negative field and Amount (Value) field -->
                 <div class="col-2 small-field">
                   <select class="form-control font-weight-bold">
-                    <option id="plus">+</option>
-                    <option id="minus">-</option>
+                    <option value="inc">+</option>
+                    <option value="exp">-</option>
                   </select>
                 </div>
                 <!-- DESCRIPTION -->
                 <div class="col">
                   <input type="text" id="add-todo "class="form-control" placeholder="Add description">
                 </div>
+                <!-- Error -->
+                <p id="error"></p>
+                
                 <div class="col-2">
-                  <input type="text" id="add-value" class="form-control" placeholder="Value">
+                  <input type="number" id="add-value" class="form-control" placeholder="Value">
                 </div>
                 <button type="submit" id="submit-button" class="btn btn-sm float-right">
                 <img src="images/glyphicons-ok-sign.png">
