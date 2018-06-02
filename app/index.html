@@ -62,22 +62,23 @@
               <div class="form-row">
                 <!-- Positive/Negative field and Amount (Value) field -->
                 <div class="col-2 small-field">
-                  <select class="form-control font-weight-bold">
+                  <select id="signVal" class="form-control font-weight-bold">
                     <option value="inc">+</option>
                     <option value="exp">-</option>
                   </select>
                 </div>
                 <!-- DESCRIPTION -->
                 <div class="col">
-                  <input type="text" id="add-todo "class="form-control" placeholder="Add description">
+                  <input type="text" id="add-todo" class="form-control" placeholder="Add description">
                 </div>
                 <!-- Error -->
                 <p id="error"></p>
                 
+                <!-- VALUE -->
                 <div class="col-2">
                   <input type="number" id="add-value" class="form-control" placeholder="Value">
                 </div>
-                <button type="submit" id="submit-button" class="btn btn-sm float-right">
+                <button type="submit" id="submit-button" class="btn btn-sm float-right" onclick="handlers.processData()">
                 <img src="images/glyphicons-ok-sign.png">
               </button>
               </div>
@@ -130,6 +131,7 @@
 
 
     <!-- Optional JavaScript -->
+    <script src="main.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
