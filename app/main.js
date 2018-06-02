@@ -1,72 +1,29 @@
+// Budget Controller
+let budgetController = (function () {
 
-/* i'm not sure these lines are right or
-    set aside for now
+})();
 
-// Select the plus sign
-const plus = document.getElementById(plus);
-// Select the minus sign
-const minus = document.getElementById(minus);
-// Select p for an error message
-const error = document.getElementById(error);
+// UIController
+let UIController = (function () {
 
-*/
-/*
-// Select the button
-  let submitButton = document.getElementById('submit-button'); // check box button
-*/  
+})();
 
+// Globel Controller
+let controler = (function (budgetCtrl, UICtrl) {
+  // Select the button
+  let submitButton = document.querySelector('#submit-button');
+  // On Click
+  submitButton.addEventListener('click', () => {
+    
+    // 1. Get the field input data
 
-// Todo object
-const todoList = {
-  // Store todo from input in an array
-        allItems: {
-            exp: [],
-            inc: []
-        },
-        totals: {
-            exp: 0,
-            inc: 0
-        },
-        // displayTodos() {
-        //   // Check if the todo array is empty
-        //   if (this.allItems.exp.length === 0) {
-        //     console.log('Please add your todo list!');
-        //     error.innerHTML = 'Please add your todo list!';
-        //   // } else {
-        //         // Loop through the todo array
-        //   //   for (let i = 0; i < this.todos.length; i++) {
-        //   //     if (this.todos[i].complete === true) {
-        //   //       this.todos[i].append();
-        //   //     }
-        //   //   }
-        //   // }
-        //   }
-        //  }
-       };
+    // 2. Add the item to the budget controler
 
-/*
-// Display todo function
-function displayTodos(value) {
-       if (addValue === null) {
-        console.log('Please add your todo list!');
-        error.innerHTML = 'Please add your todo list!';
-}
-}
-displayTodos();
-*/
+    // 3. Add the item to the UI
 
+    // 4. Calculate the budget
 
-var handlers = {
-  processData: function() {
-      // Select the todo form input.
-      let addTodo = document.getElementById('add-todo').value; // "add description" field
-      // Select the value form input
-      let addValue = document.getElementById('add-value').value; // "value" field
-      // matari added
-      let signValue = document.getElementById('signVal').selectedIndex;
-
-      alert(addTodo);
-      alert(addValue);
-      alert(signValue);
-  }
-}
+    // 5. Display the budget on the UI
+    console.log('Click');
+  });
+})(budgetController, UIController);
