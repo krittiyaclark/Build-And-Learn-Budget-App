@@ -1,19 +1,30 @@
 // Budget Controller
-let budgetController = (function () {
+const budgetController = (function () {
 
 })();
 
-// UIController
-let UIController = (function () {
-
+// UIController / Public function
+const UIController = (function () {
+  // Object that return will be assigned to the UIController
+  return {
+    getInput: function () {
+      // Return all data
+      return {
+        type: document.querySelector('#value-type').value, // Either inc or exp value
+        discription: document.querySelector('#add-todo').value, // Select add-todo input
+        value: document.querySelector('#add-value').value // Select add-value input
+      };
+    }
+  };
 })();
 
 // Globel Controller
-let controler = (function (budgetCtrl, UICtrl) {
+const controler = (function (budgetCtrl, UICtrl) {
   // Add item
   let ctrlAddItem = () => {
     // 1. Get the field input data
-
+    let input = UICtrl.getInput();
+    console.log(input);
     // 2. Add the item to the budget controler
 
     // 3. Add the item to the UI
@@ -25,7 +36,7 @@ let controler = (function (budgetCtrl, UICtrl) {
   }
 
   // Select the button
-  let submitButton = document.querySelector('#submit-button');
+  const submitButton = document.querySelector('#submit-button');
   // On Click
   submitButton.addEventListener('click', ctrlAddItem);
   // Set up keypress when user click enter
