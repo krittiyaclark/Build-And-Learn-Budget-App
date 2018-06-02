@@ -22,7 +22,7 @@ const UIController = (function () {
 const controller = (function (budgetCtrl, UICtrl) {
 
   // Set up all eventlisteners
-  const setupEventleners = function () {
+  const setupEventListeners = function () {
     // Select the button
     const submitButton = document.querySelector('#submit-button');
     // On Click
@@ -51,11 +51,11 @@ const controller = (function (budgetCtrl, UICtrl) {
     // 5. Display the budget on the UI
   };
 
-  // Call setupEventleners() / Public function
+  // Call setupEventListeners() / Public function
   return {
     init: function () {
       console.log('App started!');
-      setupEventleners();
+      setupEventListeners();
     }
   };
 })(budgetController, UIController);
