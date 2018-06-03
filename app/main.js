@@ -1,6 +1,34 @@
-// Budget Controller
+/*
+// Set up three private modules or IIFE, budgetController, UIController, controller
+// Use controller function to connect all functions and communicate each other
+*/
+
+// Budget Controller keeps track income/expense
 const budgetController = (function () {
 
+  // Each item has description and value also id
+  const Expense = function (id, desc, val) {
+    this.id = id;
+    this.desc = desc;
+    this.val = val;
+  };
+
+  const Income = function (id, desc, val) {
+    this.id = id;
+    this.desc = desc;
+    this.val = val;
+  };
+  // Store income/expense and data
+  const data = {
+    allItems: {
+      exp: [],
+      inc: []
+    },
+    totals: {
+      exp: 0,
+      inc: 0
+    }
+  };
 })();
 
 // UIController / Public function
