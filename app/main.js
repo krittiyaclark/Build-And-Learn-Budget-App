@@ -5,7 +5,6 @@
 
 // Budget Controller keeps track income/expense
 const budgetController = (function () {
-
   // Each item has description and value also id
   const Expense = function (id, desc, val) {
     this.id = id;
@@ -36,7 +35,11 @@ const budgetController = (function () {
       let newItem;
       let ID;
       // Create new ID
-      ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
+      if (data.allItems[type].length > 0) {
+        ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
+      } else {
+        ID = 0;
+      }
 
       // Create new item based on 'inc' or 'exp' type
       if (type === 'exp') {
@@ -56,28 +59,63 @@ const budgetController = (function () {
 
 // UIController / Public function
 const UIController = (function () {
+  // DOM selector
+  let DOMstrings = {
+      inputType: '#value-type',
+      inputDescription: '#add-todo',
+      inputValue: '#add-value',
+      inputBtn: '#submit-button',
+      incomeContainer: '.income-list',
+      expensesContainer: '.expenses-list'
+  };
+
   // Object that return will be assigned to the UIController
   return {
     getInput: function () {
       // Return all data
       return {
-        type: document.querySelector('#value-type').value, // Either inc or exp value
-        discription: document.querySelector('#add-todo').value, // Select add-todo input
-        value: document.querySelector('#add-value').value // Select add-value input
+        type: document.querySelector(DOMstrings.inputType).value, // Either inc or exp value
+        description: document.querySelector(DOMstrings.inputDescription).value, // Select add-todo input
+        value: document.querySelector(DOMstrings.inputValue).value // Select add-value input
       };
+    },
+
+    addListItem: function (obj, type) {
+      let html;
+      let newHtml;
+      let element;
+      // Create HTML string with placeholder text
+      if (type === 'inc') {
+          element = DOMstrings.incomeContainer;
+
+          html = '<div class="item clearfix" id="income-%id%"> <div class="item-description">%desc%</div><div class="right clearfix"><div class="item-value">%val%</div><div class="item-delete"><button class="item-delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+      } else if (type === 'exp') {
+          element = DOMstrings.expensesContainer;
+
+          html = '<div class="item clearfix" id="expense-%id%"><div class="item-description">%desc%</div><div class="right clearfix"><div class="item-value">%val%</div><div class="item-percentage"></div><div class="item-delete"><button class="item-delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+      }
+
+      // Replace the placeholder text with some actual data
+      newHtml = html.replace('%id%', obj.id);
+      newHtml = newHtml.replace('%desc%', obj.desc);
+      newHtml = newHtml.replace('%val%', obj.val);
+
+      // Insert the HTML into the DOM
+      document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+    },
+    getDOMstrings: function () {
+        return DOMstrings;
     }
   };
 })();
 
 // Globel Controller
 const controller = (function (budgetCtrl, UICtrl) {
-
   // Set up all eventlisteners
   const setupEventListeners = function () {
-    // Select the button
-    const submitButton = document.querySelector('#submit-button');
+    let DOM = UICtrl.getDOMstrings();
     // On Click
-    submitButton.addEventListener('click', ctrlAddItem);
+    document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
     // Set up keypress when user click enter
     document.addEventListener('keypress', (e) => {
       // Keypress Code, keyCode and Keypress Code for older browser which
@@ -98,7 +136,7 @@ const controller = (function (budgetCtrl, UICtrl) {
     // 2. Add the item to the budget controller
     newItem = budgetCtrl.addItem(input.type, input.description, input.value);
     // 3. Add the item to the UI
-
+    UICtrl.addListItem(newItem, input.type);
     // 4. Calculate the budget
 
     // 5. Display the budget on the UI

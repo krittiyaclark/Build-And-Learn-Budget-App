@@ -62,3 +62,18 @@
 .hdr2 {
 	background-color: rgba(20, 33, 79, 0.9);
 }
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.item-description {
+    float: left;
+}
+
+.item-value {
+    float: left;
+    transition: transform 0.3s;
+}

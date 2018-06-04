@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-grid.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-grid.min.css"> -->
     <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -71,31 +71,30 @@
                 <div class="col">
                   <input type="text" id="add-todo" class="form-control" placeholder="Add description">
                 </div>
-                <!-- Error -->
-                <p id="error"></p>
-
                 <!-- VALUE -->
                 <div class="col-2">
                   <input type="number" id="add-value" class="form-control" placeholder="Value">
                 </div>
-                <button type="submit" id="submit-button" class="btn btn-sm float-right">
+                <button id="submit-button" class="btn btn-sm float-right">
                 <img src="images/glyphicons-ok-sign.png">
               </button>
               </div>
             </form>
           </div>
         </div>
+      </div>
 
         <!-- Recorded entries of income and expense -->
+        <div class="container">
         <div class="row">
           <div class="col-md-10 offset-md-1">
             <!-- Header Row of Table -->
             <div class="row hdr2">
               <div class="col font-weight-bold tbl-hdr-inc">
-                INCOME
+                <h2>INCOME</h2>
               </div>
               <div class="col font-weight-bold tbl-hdr-exp">
-                EXPENSES
+                <h2>EXPENSES</h2>
               </div>
             </div>
             <!-- Header Row End -->
@@ -104,14 +103,14 @@
             <div class="row new-entry">
               <div class="col"> <!-- Income Column -->
                 <div class="row">
-                  <div class="col">payroll deposit</div>
-                  <div class="col text-right">520</div>
+                  <div class="col income-list"></div>
+                  <!-- <div class="col text-right">520</div> -->
                 </div>
               </div>
               <div class="col"> <!-- Expenses Column -->
                 <div class="row">
-                  <div class="col">cheese</div>
-                  <div class="col text-right">-5.00</div>
+                  <div class="col expenses-list"></div>
+                  <!-- <div class="col text-right">-5.00</div> -->
                 </div>
               </div>
             </div>
@@ -123,8 +122,8 @@
     <script src="main.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <!-- <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script> -->
   </body>
 </html>
