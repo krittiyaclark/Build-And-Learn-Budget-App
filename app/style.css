@@ -45,12 +45,6 @@
 	max-width: 80px
 }
 
-.new-entry {
-	border-color: rgba(0, 0, 0, 0.3);
-	border-style: solid;
-	border-width: 2px 0px;
-}
-
 .tbl-hdr-inc {
 	color: palegreen;
 }
@@ -63,10 +57,26 @@
 	background-color: rgba(20, 33, 79, 0.9);
 }
 
+/*
+ *
+ * Append Todo List
+ *
+ */
+
 .clearfix::after {
     content: "";
     display: table;
     clear: both;
+}
+
+.item {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.item:first-child {
+    border-top: 1px solid #e7e7e7;
+		margin: 15px;
 }
 
 .item-description {
@@ -76,4 +86,30 @@
 .item-value {
     float: left;
     transition: transform 0.3s;
+}
+
+.right {
+    float: right;
+}
+
+.income-list .item-value {
+	color: #28b9b5;
+}
+
+.expenses-list .item-value {
+	color: #ff5049;
+}
+
+.item-delete-btn {
+    font-size: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+}
+
+.item-delete {
+    float: left;
 }
