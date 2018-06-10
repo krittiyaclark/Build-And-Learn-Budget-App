@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,119 +13,109 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Team INT-16 | Build-And-Learn: Budget-App</title>
-  </head>
+</head>
 
 
-  <body>
+<body>
     <header class="bg">
         <div class="container">
-          <div class="row">
-          	<div class="col-md-10 offset-md-1 hdr app-head">
-          		<div class="app-title">
-                Available Budget in May 2018
-              </div>
-              <div class="app-balance">
-                175.00
-              </div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1 hdr app-head">
+                    <div class="app-title">
+                        <h1> Available Budget in May 2018</h1>
+                    </div>
+                    <div class="app-balance">
+                        175.00
+                    </div>
 
-              <div class="row app-income">
-                <div class="col  text-left">
-                  INCOME
-                </div>
-              </div>
-              <div class="row app-income">
-                <div class="col text-right">
-                  250.00
-                </div>
-              </div>
+                    <div class="row app-income">
+                        <div class="col  text-left">
+                            <h5>INCOME</h5>
+                        </div>
+                    </div>
+                    <div class="row app-income">
+                        <div class="col text-right">
+                            250.00
+                        </div>
+                    </div>
 
-              <div class="row app-expenses">
-                <div class="col text-left">
-                  EXPENSES
+                    <div class="row app-expenses">
+                        <div class="col text-left">
+                            <h5>EXPENSES</h5>
+                        </div>
+                    </div>
+                    <div class="row app-expenses">
+                        <div class="col-sm text-right">
+                            -75.00
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="row app-expenses">
-                <div class="col-sm text-right">
-                  -75.00
-                </div>
-              </div>
-          	</div>
-          </div>
+            </div>
         </div>
     </header>
 
-      <!-- End of Header Section -->
+    <!-- End of Header Section -->
 
-      <!-- Beginning of One-line Form Section and below that -->
-      <div class="container">
+    <!-- Beginning of One-line Form Section -->
+    <div class="container">
         <div class="row">
-          <div class="col-md-10 offset-md-1 hdr">
-            <form>
-              <div class="form-row">
-                <!-- Positive/Negative field and Amount (Value) field -->
-                <div class="col-2 small-field">
-                  <select id="value-type" class="form-control font-weight-bold">
-                    <option value="inc">+</option>
-                    <option value="exp">-</option>
-                  </select>
-                </div>
-                <!-- DESCRIPTION -->
-                <div class="col">
-                  <input type="text" id="add-todo" class="form-control" placeholder="Add description">
-                </div>
-                <!-- VALUE -->
-                <div class="col-2">
-                  <input type="number" id="add-value" class="form-control" placeholder="Value">
-                </div>
-                <button id="submit-button" class="btn btn-sm float-right">
-                <img src="images/glyphicons-ok-sign.png">
-              </button>
-              </div>
-            </form>
-          </div>
+            <div class="col-md-10 offset-md-1 hdr">
+                <form>
+                    <div class="form-row">
+                        <!-- Positive/Negative field and Amount (Value) field -->
+                        <div class="col-2 small-field">
+                            <select id="value-type" class="form-control font-weight-bold">
+                   <option value="inc">+</option>
+                   <option value="exp">-</option>
+                 </select>
+                        </div>
+                        <!-- DESCRIPTION -->
+                        <div class="col">
+                            <input type="text" id="add-todo" class="form-control" placeholder="Add description">
+                        </div>
+                        <!-- VALUE -->
+                        <div class="col-2">
+                            <input type="number" id="add-value" class="form-control" placeholder="Value">
+                        </div>
+                        <button id="submit-button" class="btn btn-sm float-right">
+               <img src="images/glyphicons-ok-sign.png">
+             </button>
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
+    </div>
 
-        <!-- Recorded entries of income and expense -->
-        <div class="container">
+    <!-- Recorded entries of income and expense -->
+    <div class="container">
         <div class="row">
-          <div class="col-md-10 offset-md-1">
-            <!-- Header Row of Table -->
-            <div class="row hdr2">
-              <div class="col font-weight-bold tbl-hdr-inc">
-                <h2>INCOME</h2>
-              </div>
-              <div class="col font-weight-bold tbl-hdr-exp">
-                <h2>EXPENSES</h2>
-              </div>
+            <div class="col-md-5 offset-md-1 mr-0  pl-0 pr-0 bg-light border" id="IncomeLog">
+                <!-- Income Section -->
+                <section>
+                    <h1 class="bg-success">Income</h1>
+                    <!-- append new html elements for income here -->
+                </section>
             </div>
-            <!-- Header Row End -->
+            <div class="col-md-5 offset-md-1 ml-0 pl-0 pr-0 bg-light border" id="expenseLog">
+                <!-- Expenses Section -->
+                <section>
+                    <h1 class="bg-danger">Expenses</h1>
+                    <!-- append new html elements for expenses here -->
 
-            <!-- Example Row Entry -->
-            <div class="row new-entry">
-              <div class="col"> <!-- Income Column -->
-                <div class="row">
-                  <div class="col income-list"></div>
-                  <!-- <div class="col text-right">520</div> -->
-                </div>
-              </div>
-              <div class="col"> <!-- Expenses Column -->
-                <div class="row">
-                  <div class="col expenses-list"></div>
-                  <!-- <div class="col text-right">-5.00</div> -->
-                </div>
-              </div>
+                </section>
             </div>
-          </div>
+
         </div>
-      </div>
+    </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <script src="main.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
     <!-- <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script> -->
-  </body>
+</body>
+
 </html>

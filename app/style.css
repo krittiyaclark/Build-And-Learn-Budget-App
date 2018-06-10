@@ -1,61 +1,63 @@
 .hdr {
-	background-color: rgba(0, 195, 170, 0.14);
-	border: 2px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 195, 170, 0.14);
+    border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .bg {
-	background-image: url("./images/clouds.jpg");
-	/* Center and scale the image nicely */
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+    background-image: url("./images/clouds.jpg");
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .app-head {
-	text-align: center;
+    text-align: center;
 }
 
 .app-title {
-	font-size: 1.3rem;
-	font-weight: 700;
-	margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 10px;
 }
 
 .app-balance {
-	font-size: 2.2rem;
-	margin-bottom: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
 
 .app-income {
-	font-weight: 700;
-	background-color: palegreen;
-	max-width: 350px;
-	margin: auto;
+    font-weight: 700;
+    background-color: palegreen;
+    max-width: 350px;
+    margin: auto;
 }
+
 .app-expenses {
-	font-weight: 700;
-	background-color: coral;
-	max-width: 350px;
-	margin: auto;
-	text-align: left;
+    font-weight: 700;
+    background-color: coral;
+    max-width: 350px;
+    margin: auto;
+    text-align: left;
 }
 
 .small-field {
-	min-width: 70px;
-	max-width: 80px
+    min-width: 70px;
+    max-width: 80px
 }
 
 .tbl-hdr-inc {
-	color: palegreen;
+    color: palegreen;
 }
 
 .tbl-hdr-exp {
-	color: coral;
+    color: coral;
 }
 
 .hdr2 {
-	background-color: rgba(20, 33, 79, 0.9);
+    background-color: rgba(20, 33, 79, 0.9);
 }
+
 
 /*
  *
@@ -76,7 +78,7 @@
 
 .item:first-child {
     border-top: 1px solid #e7e7e7;
-		margin: 15px;
+    margin: 15px;
 }
 
 .item-description {
@@ -93,11 +95,11 @@
 }
 
 .income-list .item-value {
-	color: #28b9b5;
+    color: #28b9b5;
 }
 
 .expenses-list .item-value {
-	color: #ff5049;
+    color: #ff5049;
 }
 
 .item-delete-btn {
@@ -111,5 +113,13 @@
 }
 
 .item-delete {
+    float: left;
+}
+
+#incomeLog {
+    float: left;
+}
+
+#expenseLog {
     float: left;
 }
