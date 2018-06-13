@@ -28,23 +28,23 @@
                         175.00
                     </div>
 
-                    <div class="row app-income">
+                    <div class="row app-income bg-success">
                         <div class="col  text-left">
                             <h5>INCOME</h5>
                         </div>
                     </div>
-                    <div class="row app-income">
+                    <div class="row app-income bg-success">
                         <div class="col text-right">
                             250.00
                         </div>
                     </div>
 
-                    <div class="row app-expenses">
+                    <div class="row app-expenses bg-danger">
                         <div class="col text-left">
                             <h5>EXPENSES</h5>
                         </div>
                     </div>
-                    <div class="row app-expenses">
+                    <div class="row app-expenses bg-danger">
                         <div class="col-sm text-right">
                             -75.00
                         </div>
@@ -60,9 +60,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 offset-md-1 hdr">
-                <form id="addForm" class="form-inline mb-3">
-                    <input type="text" class="form-control mr-3" id="item">
-                    <input type="submit" class="btn btn-dark" value="Submit">
+                <form id="addForm" class="form-row mb-3">
+                    <div class="col">
+                        <input type="text" class="form-control" id="desc" placeholder="Add description">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" class="form-control" id="value" placeholder="Value">
+                    </div>
+                    <button type="submit" id="submit-button" class="btn btn-sm">
+                            <img src="images/glyphicons-ok-sign.png">
+                    </button>
                 </form>
             </div>
         </div>
