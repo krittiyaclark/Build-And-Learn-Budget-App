@@ -28,23 +28,23 @@
                         175.00
                     </div>
 
-                    <div class="row app-income">
+                    <div class="row app-income bg-success">
                         <div class="col  text-left">
                             <h5>INCOME</h5>
                         </div>
                     </div>
-                    <div class="row app-income">
+                    <div class="row app-income bg-success">
                         <div class="col text-right">
                             250.00
                         </div>
                     </div>
 
-                    <div class="row app-expenses">
+                    <div class="row app-expenses bg-danger">
                         <div class="col text-left">
                             <h5>EXPENSES</h5>
                         </div>
                     </div>
-                    <div class="row app-expenses">
+                    <div class="row app-expenses bg-danger">
                         <div class="col-sm text-right">
                             -75.00
                         </div>
@@ -56,31 +56,20 @@
 
     <!-- End of Header Section -->
 
-    <!-- Beginning of One-line Form Section -->
+    <!-- Beginning Form Section -->
     <div class="container">
         <div class="row">
             <div class="col-md-10 offset-md-1 hdr">
-                <form>
-                    <div class="form-row">
-                        <!-- Positive/Negative field and Amount (Value) field -->
-                        <div class="col-2 small-field">
-                            <select id="value-type" class="form-control font-weight-bold">
-                   <option value="inc">+</option>
-                   <option value="exp">-</option>
-                 </select>
-                        </div>
-                        <!-- DESCRIPTION -->
-                        <div class="col">
-                            <input type="text" id="add-todo" class="form-control" placeholder="Add description">
-                        </div>
-                        <!-- VALUE -->
-                        <div class="col-2">
-                            <input type="number" id="add-value" class="form-control" placeholder="Value">
-                        </div>
-                        <button id="submit-button" class="btn btn-sm float-right">
-               <img src="images/glyphicons-ok-sign.png">
-             </button>
+                <form id="addForm" class="form-row mb-3">
+                    <div class="col">
+                        <input type="text" class="form-control" id="desc" placeholder="Add description">
                     </div>
+                    <div class="col-2">
+                        <input type="text" class="form-control" id="value" placeholder="Value">
+                    </div>
+                    <button type="submit" id="submit-button" class="btn btn-sm">
+                            <img src="images/glyphicons-ok-sign.png">
+                    </button>
                 </form>
             </div>
         </div>
@@ -93,16 +82,22 @@
                 <!-- Income Section -->
                 <section>
                     <h1 class="bg-success">Income</h1>
-                    <!-- append new html elements for income here -->
-                    <span class="income-list"></span>
+                    <ul id="items" class="list-group">
+                        <li class="list-group-item">
+                            <!-- append new html elements for income here -->
+                        </li>
+                    </ul>
                 </section>
             </div>
             <div class="col-md-5 offset-md-1 ml-0 pl-0 pr-0 bg-light border" id="expenseLog">
                 <!-- Expenses Section -->
                 <section>
                     <h1 class="bg-danger">Expenses</h1>
-                    <!-- append new html elements for expenses here -->
-                    <span class="expenses-list"></span>
+                    <ul id="negativeItems" class="list-group">
+                        <li class="list-group-item">
+                            <!-- append new html elements for expenses here -->
+                        </li>
+                    </ul>
                 </section>
             </div>
 
