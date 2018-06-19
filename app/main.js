@@ -11,21 +11,28 @@ function addItem(e) {
     // Get input value
     var itemDesc = document.getElementById('desc').value;
     var itemValue = document.getElementById('value').value;
+    let validVal = !isNaN(itemValue) && !(itemValue==""); // is itemValue a valid number?
+    let validDesc = !(itemDesc == ""); // is itemDesc not an empty string?
     let html = '<li><div class="row"><div class="col-6">%desc%</div><div class="col-6"><span class="float-right">%val%<button class=""><img src="images/glyphicons-ok-sign.png"></button></span></div></div></li>';
     let newHtml = html.replace('%desc%', itemDesc);
     newHtml = newHtml.replace('%val%', itemValue)
 
 
-    console.log(newHtml);
-    console.log(incomeList);
-    //if value is negative place value in expense list 
-    if (itemValue.indexOf('-') > -1) {
-        expenseList.insertAdjacentHTML('beforeend', newHtml);
+    // evaluate for valid values first
+    if (validDesc && validVal){
+        //if value is negative place value in expense list 
+        if (itemValue.indexOf('-') > -1) {
+            expenseList.insertAdjacentHTML('beforeend', newHtml);
+        }
+        //if value is positive place in income list
+        else {
+            // incomeList.appendChild(newHtml);
+            incomeList.insertAdjacentHTML('beforeend', newHtml);
+        }
+    } else {
+        alert('Please complete both fields with valid values!');
     }
-    //if value is positive place in income list
-    else {
-        // incomeList.appendChild(newHtml);
-        incomeList.insertAdjacentHTML('beforeend', newHtml);
-    }
+
+
     form.reset();
 }
