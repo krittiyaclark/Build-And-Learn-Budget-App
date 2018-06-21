@@ -3,6 +3,7 @@ var incomeList = document.getElementById('items');
 var expenseList = document.getElementById('negativeItems');
 // Form submit event
 form.addEventListener('submit', addItem);
+incomeList.addEventListener('click', delItem);
 
 // Add item
 function addItem(e) {
@@ -13,7 +14,7 @@ function addItem(e) {
     var itemValue = document.getElementById('value').value;
     let validVal = !isNaN(itemValue) && !(itemValue==""); // is itemValue a valid number?
     let validDesc = !(itemDesc == ""); // is itemDesc not an empty string?
-    let html = '<li><div class="row"><div class="col-6">%desc%</div><div class="col-6"><span class="float-right">%val%<button class=""><img src="images/glyphicons-ok-sign.png"></button></span></div></div></li>';
+    let html = '<li><div class="row"><div class="col-6">%desc%</div><div class="col-6"><span class="float-right">%val%<button class="delete"><img src="images/glyphicons-ok-sign.png"></button></span></div></div></li>';
     let newHtml = html.replace('%desc%', itemDesc);
     newHtml = newHtml.replace('%val%', itemValue)
 
@@ -35,4 +36,15 @@ function addItem(e) {
 
 
     form.reset();
+}
+
+// Delete item
+function delItem(e) {
+    
+    if(e.target.parentElement.classList.contains('delete')){
+        var bi = (e.target.parentElement); // bi = button item
+        bi = bi.parentElement.parentElement.parentElement.parentElement;
+        incomeList.removeChild(bi);
+    }
+    
 }
