@@ -4,6 +4,7 @@ var expenseList = document.getElementById('negativeItems');
 // Form submit event
 form.addEventListener('submit', addItem);
 incomeList.addEventListener('click', delItem);
+expenseList.addEventListener('click', delExpItem);
 
 // Add item
 function addItem(e) {
@@ -38,7 +39,7 @@ function addItem(e) {
     form.reset();
 }
 
-// Delete item
+// Delete Income Item
 function delItem(e) {
     
     if(e.target.parentElement.classList.contains('delete')){
@@ -48,3 +49,28 @@ function delItem(e) {
     }
     
 }
+
+// Delete Expense Item
+function delExpItem(e) {
+    if(e.target.parentElement.classList.contains('delete')){
+        var bi = (e.target.parentElement); // bi = button item
+        bi = bi.parentElement.parentElement.parentElement.parentElement;
+        expenseList.removeChild(bi);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
